@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<title>Contacto Preobe</title>
+<link rel="stylesheet" type="text/css" href="estilo_preobe.css"/>
+<style type="text/css">
+.datos {width:220px; height:350px;float:left;margin:0px; padding-left:40px}
+.formu { height:350px;width:600px;float:left;margin:0px 0px 0px 25px; float:left;}
+.textor {font-family:Verdana, Helvetica, Arial, sans-serif;font-size:11.35px;color:#494949}
+.noticia_cont {color:#666666; font-size:9px;}
+a:link {text-decoration: none; color:#666666;}
+a:visited {text-decoration: none;color:#666666;}
+a:hover {text-decoration: none;}
+a:active {text-decoration: none;}
+
+/* Formulario */
+.contactop{
+    border: 0px solid #F3715A; width:600px; height:300px;
+    border-radius: 6px;
+    padding: 45px 20px 20px 40px;
+    background-color: none;
+    font-family:sans-serif;font-size:11px;color:#333333;
+}
+.contactop label{
+    display: block; /* esto es para que el label se sobreponga a la caja de texto */
+    font-weight: bold;
+}
+.contactop div{
+    margin-bottom: 15px; /* esto los separara un poco */
+}
+.contactop input[type='text'], .contactop textarea{
+    padding: 7px 6px;
+    width: 260px; /* una longitud definida */
+    border: 0px solid #CED5D7;
+    resize: none; /* esta propiedad es para que el textarea no sea redimensionable */
+    margin: 5px 0;
+	background-color:#d0cfc6;
+}
+.contactop input[type='text']:focus, .contactop textarea:focus{
+    outline: none; /* reset especifico para Chrome/Safari */
+}
+.contactop input[type='submit']{
+    padding: 8px 16px;
+    border-radius: 0px;
+    font-weight:lighter; 
+    background: #d0cfc6; /* fallback para navegadores que no soporten degradados */
+}
+.contactop input[type='submit']:hover{
+    background: #d0cfc6;
+}
+.contactop input[type='submit']:active{
+    background: #d0cfc6;
+}
+.error{
+    background-color: #F3715A;
+    padding: 6px 12px;
+    border-radius: 4px;
+    color: white;
+    font-weight:normal;
+    margin-left: 16px;
+    margin-top: 6px;
+    position: absolute;
+}
+.error:before{ /* Este es un truco para crear una flechita */
+    content: '';
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid #F3715A;
+    border-left: 8px solid transparent;
+    left: -16px;
+    position: absolute;
+    top: 5px;
+}
+.result_fail{
+    background: none repeat scroll 0 0 #F3715A;
+    border-radius: 10px 10px 10px 10px;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-align: center;
+}
+.result_ok{
+    background: none repeat scroll 0 0 #d0cfc6;
+    border-radius: 10px 10px 10px 10px;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-align: center;
+}
+a img {border:none;}
+
+</style>
+<script src="scripts/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+/*script del adordeon*/
+$(function(){
+		(function($){
+			
+			$.fn.accordion = function(custom) {
+				var defaults = {
+					keepOpen: false,
+					startingOpen: false
+				} 
+				var settings = $.extend({}, defaults, custom);
+				if(settings.startingOpen){
+					$(settings.startingOpen).show();
+				}
+			
+				return this.each(function(){
+					var obj = $(this);
+					$('li a', obj).click(function(event){
+							var elem = $(this).next();
+							if(elem.is('ul')){
+								event.preventDefault();
+								if(!settings.keepOpen){
+									obj.find('ul:visible').not(elem).not(elem.parents('ul:visible')).slideUp();
+								}
+								elem.slideToggle();
+							}
+					});
+				});
+			};
+		})(jQuery);
+		
+	$('#menuderecha').accordion({keepOpen:false, startingOpen: '#open'});
+	});
+	
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+<script src="funciones.js"></script>
+<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAA9CTrqkv0nuNIFtmF2UIfjxR_4iKzTPq6FHB_dj7gZVnANSPFphT3-Bb5UKsIagZY7sDnPHiODYfKTw" type="text/javascript"></script>
+
+
+</head>
+
+<body onload="MM_preloadImages('pr_imagenes/acceso_alt.png')">
+<?php
+        if(isset($_POST['boton'])){
+            if($_POST['nombre'] == ''){
+                $errors[1] = '<span class="error">Ingrese su nombre</span>';
+            }else if($_POST['email'] == '' or !preg_match("/^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/",$_POST['email'])){
+                $errors[2] = '<span class="error">Ingrese un email correcto</span>';
+            }else if($_POST['asunto'] == ''){
+                $errors[3] = '<span class="error">Ingrese un asunto</span>';
+            }else if($_POST['mensaje'] == ''){
+                $errors[4] = '<span class="error">Ingrese un mensaje</span>';
+            }else{
+                $dest = "preobe@gmail.com"; //Email de destino
+                $nombre = $_POST['nombre'];
+                $email = $_POST['email'];
+                $asunto = $_POST['asunto']; //Asunto
+                $cuerpo = $_POST['mensaje']; //Cuerpo del mensaje
+                //Cabeceras del correo
+                $headers = "From: $nombre $email\r\n"; //Quien envia?
+                $headers .= "X-Mailer: PHP5\n";
+                $headers .= 'MIME-Version: 1.0' . "\n";
+                $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n"; //
+ 
+                if(mail($dest,$asunto,$cuerpo,$headers)){
+                    $result = '<div class="result_ok">Email enviado correctamente</div>';
+                    // si el envio fue exitoso reseteamos lo que el usuario escribio:
+                    $_POST['nombre'] = '';
+                    $_POST['email'] = '';
+                    $_POST['asunto'] = '';
+                    $_POST['mensaje'] = '';
+                }else{
+                    $result = '<div class="result_fail">Hubo un error al enviar el mensaje</div>';
+                }
+            }
+        }
+    ?>
+<div id="contenedor" style="height:950px">
+	<div id="lateral_izq">
+		<ul id="menu">
+	    <li class="proyecto"><a class="proyecto" href="index.html"></a></li>
+        <li class="personal"><a class="personal" href="preobe_personal.html"></a></li>
+        <li class="divulgacion"><a class="divulgacion" href="preobe_divulgacion.html"></a></li>
+        <li class="eventos"><a class="eventos" href="preobe_eventos.html"></a></li>
+        <li class="registro"><a class="registro" href="preobe_participantes.html"></a></li>
+        <li class="contact"><a class="contact"></a></li>
+	  </ul>
+  	</div>
+	<div id="contenido" style="height:950px">
+    	<div class="sprite cabecera_contenedor"><img class="spriteimg  cabecera_img" src="pr_imagenes/web_pr_images.png" alt="Cabecera Preobe" width="1105px" height="1100px"/></div>
+        <div class="sprite donde_contenedor" style="margin:20px 0px 30px 60px"><img class="spriteimg donde_img" src="pr_imagenes/web_pr_images.png" alt="Donde encontrarnos" width="1105px" height="1100px"/></div>
+        <div id="mapa" style="width:400px; height:300px; border:none; float:left; margin-left:60px"></div>
+        <script type="text/javascript">
+var map = new GMap(document.getElementById("mapa")); map.addControl(new GLargeMapControl());
+
+map.centerAndZoom(new GPoint(-3.603952,37.185744), 2);
+map.setMapType(G_NORMAL_MAP);
+		</script>
+        <div class="datos">
+				<p class="textor">	
+		<span style="color:#f97159"><b>Centro Eurístikos</b></span><br /><br />Facultad de Medicina<br />	
+		Avda. de Madrid, 11 <br />
+		18071 Granada<br /><br /></p>        
+        		<p class="textor">	
+                <span style="color:#f97159"><b>Centro de Investigación Biomédica</b></span><br /><br />Parque Tecnológico<br />de Ciencias de la Salud<br />
+                Avda. del Conocimiento <br />
+                Armilla, 18100. Granada <br /></p>
+       		 	<p class="textor"><span style="color:#f97159"><b>Contacto</b></span><br /><br />958 023378 <br /> 690031555<br />preobe@gmail.com</p>
+        </div>
+        <div id="lateral_dcha" style="margin:0px 0px 0px 7px">        	
+        	<ul id="menuderecha" style="margin-top:0px">
+            	<li><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('acceso','','pr_imagenes/acceso_alt.png',1)"><img src="pr_imagenes/acceso.png" name="acceso" width="170" height="47" border="0" id="acceso" /></a>
+                	<ul>
+                    	<li><FORM name=formclave>
+                        	Nombre de usuario
+                        	<INPUT type="text" name="nombre" />
+                        	Clave
+							<INPUT type=password name=clave>
+							<INPUT type=button value=Acceder>
+							</FORM> <br /></li>
+                    </ul>
+              </li>
+                <li><a href="http://www.linkedin.com/home" target="_blank" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('siguenos','','pr_imagenes/siguenos_alt.png',1)"><img src="pr_imagenes/siguenos.png" alt="siguenos" name="siguenos" width="170" height="47" border="0" id="siguenos" /></a>                </li>  
+               	<li><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('padres','','pr_imagenes/participa_alt.png',1)"><img src="pr_imagenes/participa.png" alt="padres" name="padres" width="170" height="47" border="0" id="padres" /></a>
+                <ul><li><div style="height:120px;"></div></li></ul>
+                </li>                             
+            </ul>
+                <ul><li><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('noticias','','pr_imagenes/noticias_alt.png',1)"><img src="pr_imagenes/noticias.png" alt="noticias" name="noticias" width="170" height="47" border="0" id="noticias" /></a> 
+                                    <ul>
+                                        <li>
+                                            <marquee onmouseover=this.stop() onmouseout=this.start() direction="up" scrollAmount="2" style="width:150px;height:278px; border-bottom:thin #f97159 solid; padding:10px; text-align:center" align="middle">
+                                            <span class="noticia_cont">
+				<a href="http://www.icn2013.com/" target="_blank"><img src="pr_imagenes/pr_noticias/inus.png" align="middle"/><p><b>IUNS 20th International Congress of Nutrition</b></p><p>Granada<br/>September 15-20. 2013</p></a><p style="color: #ff0000">New Deadline for Abstract Sumbmission<br/><b>17th February</b></p><br/><br/><br/>										
+				<a href="http://www.nutrimenthe.eu/" target="_blank"><img src="pr_imagenes/pr_noticias/nutri.png" align="middle"/><p style="color: #ff0000"><b>NUTRIMENTHE Final International Conference</b><br/><i>The Effect of Diet on the Mental Performance of Children</i></p></a>Granada<br>September 13th-14th. 2013<br/><b>INUS 20th International Congress of Nutrion</b></p><br/><br/><br/>														
+				<a href="https://hiddenhunger.uni-hohenheim.de/" target="_blank"><b>Congress "Hidden Hunger - From Assessment to Solutions</b><p></p>Hohenheim<br>6-9 March 2013</a><br/><br/><br/>				
+				<a href="http://www.rcpi.ie/Faculties/Pages/ICOGPM2012.aspx" target="_blank"><b>The 2nd Irish Congress of Obstetrics, Gynaecology and Perinatal Medicine</b><p></p>Dublin<br>Nov 30 - 1 Dec, 2012</a><br/><br/><br/>		
+				<a href="http://www.proyectopreobe.com/preobe_eventos.html" target="_blank"><b>II Forum Discussion: Lipids & Programming </b><p></p>Granada<br>11th June, 2012.</a><br/><br/><br/>
+                                <a href="http://www.immunonutritionworkshop.com/index.html" target="_blank"><b>6th International Immunonutrition Workshop</b><p></p>Palma de Mallorca<br>15th - 17th of October, 2012.</a><br /><br />                            			
+                                <a href="http://www.1kserver.com/4f20153202e85/#/6" target="_blank"><h4>Noticia en prensa<br /> La Vanguardia 28/01/2012</h4><br /><em>El prólogo define la trama</em><br /><br />Los malos hábitos durante el embarazo condicionan un mayor riesgo de desarrollar enfermedades cardiovasculares, obesidad y diabetes.</a>
+
+                                            </span>
+                                            </marquee>
+                                        </li>                    
+                                    </ul>                
+                            </li></ul> 
+        </div>
+        <div class="sprite contacta_contenedor" style="margin:20px 0px 0px 60px"><img class="spriteimg contacta_img" src="pr_imagenes/web_pr_images.png" alt="Donde encontrarnos" width="1105px" height="1100px"/></div>
+        <div class="formu">
+                <form class='contactop' method='POST' action=''>
+                <div style=" width:300px; height:300px; float:left;">
+                    <div><label>Tu Nombre:</label><input type='text' class='nombre' name='nombre' value='<?php echo $_POST['nombre']; ?>'><?php echo $errors[1] ?></div>
+                    <div><label>Tu Email:</label><input type='text' class='email' name='email' value='<?php echo $_POST['email']; ?>'><?php echo $errors[2] ?></div>
+                    <div><label>Asunto:</label><input type='text' class='asunto' name='asunto' value='<?php echo $_POST['asunto']; ?>'><?php echo $errors[3] ?></div>
+                </div>
+				<div style="width:290px; height:300px;float:right; margin-left:10px">
+                <div ><label>Mensaje:</label><textarea rows='6' class='mensaje' name='mensaje'><?php echo $_POST['mensaje']; ?></textarea><?php echo $errors[4] ?></div>            
+                <div><input type='submit' value='Enviar' class='boton' name='boton'></div>
+                    <?php echo $result; ?>              
+                </div>
+                </form>               
+        </div>
+
+            <div id="disenoinv" style=" background-image:url(pr_imagenes/a.png);color:#FFFFFF;height:165px; width:930px; margin-left:0px;">
+            <div id="texto_unop" style="height:120px; text-align:left;width:175px; padding:25px 0px 0px 0px">Language <a href="index_en.html"><img align="right" src="pr_imagenes/etiq_en.png" style="margin-left:25px; margin-right:20px" /></a><img align="right" src="pr_imagenes/etiq_es.png" /><br /><br /><br />Text size <img align="right" src="pr_imagenes/etiq_a.png" style="margin:10px 20px 0px 25px" /><img align="right" src="pr_imagenes/etiq_aa.png" style="margin-top:10px" /></div>
+            <div style="background-color:#FAF0E6;width:0.5px;height:135px; float:left;border-right:0.5px solid white;margin-top:20px; margin-left:16px"></div>
+            <div id="texto_dosp" style="height:120px; width:165px; padding:20px 0px 0px 20px; text-align:center"><b>Contact us</b><br /><br />Centro Eurístikos</span><br />Facultad de Medicina<br />Avda. de Madrid, 11 <br />18071 Granada<br /><br />( 00 ) 34 958 023378</div>
+            <div style="background-color:#FAF0E6;width:0.5px;height:135px; float:left;border-right:0.5px solid white;margin-top:20px; margin-left:24px"></div>
+            <div id="texto_dosp" style="height:120px; width:165px; padding:20px 0px 0px 20px; text-align:center"><b>Web Development</b><br /><br />nanokios@gmail.com<br /></div>
+            <div style="background-color:#FAF0E6;width:0.5px;height:135px; float:left;border-right:0.5px solid white;margin-top:20px; margin-left:16px"></div>
+		<div id="texto_dosp" style="height:120px; width:165px; padding:20px 0px 0px 20px; text-align:center"><a href="http://biotic.ugr.es"><img title="biotic" src="pr_imagenes/biotic.png"></a></div>        	
+            </div>
+
+    </div>
+    </div>    
+</div>
+</body>
+</html>

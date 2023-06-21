@@ -1,0 +1,416 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Dissemination</title>
+<link rel="stylesheet" type="text/css" href="estilo_preobe.css"/>
+<style type="text/css">
+
+body {font:11.35px normal}
+.noticia_cont {color:#666666; font-size:9px;}
+a:link {text-decoration: none; color:#666666;}
+a:visited {text-decoration: none;color:#666666;}
+a img {border:none;}
+
+.publi {width:292px; height:240px; border:1px dotted #e4e1ce; float:left; padding:10px; background-color:#FFFFFF;}
+.publi2 {width:292px; height:220px; border:1px dotted #e4e1ce; float:left; padding:10px; background-color:#FFFFFF;}
+.publi3 {width:180px; height:260px; border:1px dotted #e4e1ce; float:left; padding:10px; background-color:#FFFFFF;}
+/* estilo de la tabla y pestanas */
+
+.container {width:630px;margin-left:60px;}
+.tab_container {clear:both;float:left;width:100%;background:#FFFFFF;}
+
+h2 {font-size:12px;color:#494949;text-align:center; font-weight:bold;font-family:"Courier New", Courier, monospace;}
+ul.tabs {margin:0;padding:0;float:left;list-style:none;height:32px;width:630px;}
+ul.tabs li {float:left;height:32px;border:1px dotted  #e4e1ce;border-left:none;overflow:hidden;position:relative;background-color:#FFFFFF;}
+ul.tabs li a {text-decoration:none;display:block;border:1px dotted #e4e1ce;}
+ul.tabs li a:hover {background:#F6E3D8;}
+html ul.tabs li.active, html ul.tabs li.active a:hover {background:#FFFFFF;}
+html ul.tabs li.active h2 {font-size:12px;color:#F3715A;text-align:center;font-weight:normal;font-family:"Courier New", Courier, monospace;}
+.tab_content {padding:5px 0px;font-size:10px;font-family:"Courier New", Courier, monospace;}
+.tab_content h1{padding-bottom:10px;color:#a6a395;font-size:10px;}
+.publi2 h4 {font-size:10px;color:#494949; font-weight:bolder; font:Arial, "Courier New", Helvetica, sans-serif;}
+.publi h4 {font-size:10px;color:#494949; font-weight:bolder; font:Arial, "Courier New", Helvetica, sans-serif;}
+.publi h5 {font-size:10px;color:#494949; font-weight:bolder; font:Arial, "Courier New", Helvetica, sans-serif; text-align:center;}
+.publi h6 {color:#a6a395;font-size:10px;text-align:center;font-family:"Courier New", Courier, monospace; text-align:center;}
+
+.noticia_cont {color:#FF6633;}
+</style>
+
+<script type="text/javascript" src="scripts/jquery.min.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+	//Default Action
+	$(".tab_content").hide(); //Hide all content
+	$("ul.tabs li:first").addClass("active").show(); //Activate first tab
+	$(".tab_content:first").show(); //Show first tab content
+	
+	//On Click Event
+	$("ul.tabs li").click(function() {
+		$("ul.tabs li").removeClass("active"); //Remove any "active" class
+		$(this).addClass("active"); //Add "active" class to selected tab
+		$(".tab_content").hide(); //Hide all tab content
+		var activeTab = $(this).find("a").attr("href"); //Find the rel attribute value to identify the active tab + content
+		$(activeTab).fadeIn(); //Fade in the active content
+		return false;
+	});
+
+});
+</script>
+<script type="text/javascript">
+function mostrar() {
+  obj = document.getElementById('ficha');
+  obj.style.display = (obj.style.display=='none') ? 'block' : 'none';
+  document.getElementById('enla').innerHTML = (obj.style.display=='none') ? 'Ficha' : 'Ocultar Ficha';
+}
+</script>
+<script type="text/javascript" charset="utf-8">
+$(function(){
+		(function($){
+			
+			$.fn.accordion = function(custom) {
+				var defaults = {
+					keepOpen: false,
+					startingOpen: false
+				} 
+				var settings = $.extend({}, defaults, custom);
+				if(settings.startingOpen){
+					$(settings.startingOpen).show();
+				}
+			
+				return this.each(function(){
+					var obj = $(this);
+					$('li a', obj).click(function(event){
+							var elem = $(this).next();
+							if(elem.is('ul')){
+								event.preventDefault();
+								if(!settings.keepOpen){
+									obj.find('ul:visible').not(elem).not(elem.parents('ul:visible')).slideUp();
+								}
+								elem.slideToggle();
+							}
+					});
+				});
+			};
+		})(jQuery);
+		
+	$('#menuderecha').accordion({keepOpen:false, startingOpen: '#open'});
+	});
+	
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+
+</head>
+
+<body>
+<div id="contenedor">
+<div id="lateral_izq">
+		<ul id="menu_eng">
+	    <li class="proyecto"><a class="proyecto" href="index_en.html"></a></li>
+        <li class="personal"><a class="personal" href="preobe_personal_en.html"></a></li>
+        <li class="divulgacio"><a class="divulgacio"></a></li>
+        <li class="eventos"><a class="eventos" href="preobe_eventos_en.html"></a></li>
+        <li class="registro"><a class="registro" href="preobe_participantes_en.html"></a></li>
+        <li class="contacto"><a class="contacto" href="preobe_contacto_en.php"></a></li>
+	  </ul>
+  	</div>
+    	<div id="contenido">
+    	<div class="sprite cabecera_contenedor"><img class="spriteimg  cabecera_img" src="pr_imagenes/web_pr_images_eng.png" alt="Cabecera Preobe" width="1105px" height="1100px"/></div>
+        
+    	<div class="container">        	
+    			<ul class="tabs" style="margin-top:20px">
+               	 	<li style="width:210px;"><a href="#tab1"><h2>Preobe Publications</h2></a></li>
+        		<li style="width:210px"><a href="#tab2"><h2>Group Publications</h2></a></li>
+                	<li style="width:207px"><a href="#tab3"><h2>Congresses</h2></a></li>
+                	<li style="width:210px"><a href="#tab4"><h2>Video</h2></a></li>
+                    <li style="width:210px"><a href="#tab5"><h2>Press</h2></a></li>
+                    <li style="width:207px"><a href="#tab6"><h2>Resources</h2></a></li>
+			</ul>
+    	<div class="tab_container">
+              	<div id="tab1" class="tab_content"><br>               	
+                	<div class="linea"></div>
+    	<div class="sprite divulgacion_contenedor" style="float:left; margin-bottom:15px"><img class="spriteimg  divulgacion_img" src="pr_imagenes/web_pr_images_eng.png" alt="Cabecera Preobe" width="1105px" height="1100px"/></div>
+                    <div class="publi2">
+                    <a href="#"><img src="pr_imagenes/pdf.png" width="31" height="31"></a> <a onclick='$("#pub1").toggle(600);'><img src="pr_imagenes/pdf_ver.png" width="31" height="31"></a><br><br><br>
+                    <div id="pub1" style="width:290px; height:210px; display:none;">
+                    <b>Abstract:</b> It is now well established that changes in the maternal diet at defined stages of pregnancy can affect offspring’s risk of later metabolic disease. Such alterations of fetal growth can be due to substantial modifications of materno-fetal energy partitioning regulated in part by the mammalian target of rapamycin (mTOR) and the peroxisome-proliferator activated receptor (PPAR-gamma). However, the influence of maternal body mass index (BMI) and/or insulin sensitivity on the regulation of placental ...
+					</div>           
+                    Martino J, Sebert S.P, Budge H, García-Valdés L, Segura Moreno M, Anjos T, López-Tarragona R, Marti-Romero M, Florido J, Symonds M.E, Campoy C.<h4><em>"Influence of maternal BMI and gestational diabetes on MTOR and PPARG gene expression in the term placenta"</em><br></h4>
+            		<h1>Journal of Pediatric Gastroenterology and Nutrition. 2010; 50 Suppl.2:E37</h1>
+                    
+					</div>                   	                                       
+                    <div class="publi2">
+                    <a href="#"><img src="pr_imagenes/pdf.png" width="31" height="31"></a> <a onclick='$("#pub2").toggle(600);'><img src="pr_imagenes/pdf_ver.png" width="31" height="31"></a><br><br><br>            
+                    <div id="pub2" style="width:290px; height:210px; display:none;">
+                    <b>Abstract:</b> Obesity is associated with complications during pregnancy and increased health risks in the newborn. The objective of the present study was to establish possible relationships between gut microbiota, body weight, weight gain and biochemical parameters in pregnant women. Fifty pregnant women were classified according to their BMI in normal-weight (n 34) and overweight (n 16) groups. Gut microbiota composition was analysed by quantitative real-time PCR in faeces and biochemical parameters in plasma ...
+					</div>
+                    Campoy Folgoso C, Martín-Bautista E, García-Valdés L, Florido Navío J, Agil A, Lorente J.A, Marcos A, López-Sabater M.C, Miranda-León T, Sanz Y, Molina-Font J.A.<h4><em>"Gut microbiota composition is associated with body weight, weight gain and
+biochemical parameters in pregnant women"</em><br></h4>
+            		<h1>British Journal of Nutrition. 2010; 104:83–92</h1>
+					</div>                   	                                       
+                    <div class="publi2">
+                    <a><img src="pr_imagenes/pdf.png" width="31" height="31"></a> <a onclick='$("#pub3").toggle(600);'><img src="pr_imagenes/pdf_ver.png" width="31" height="31"></a><br><br><br>            
+                    <div id="pub3" style="width:290px; height:210px; display:none;">
+					<b>Abstract:</b> To analyse the gut microbiota composition in overweight and normal weight pregnant woman, and to establish possible relations between specific bacterial groups, body weight and weight gain over pregnancy...                  
+                    </div>
+                    Sanz Y, Carmen Collado M, Garcıa-Valdes L, Martın-Lagos J, Segura M, Piqueras M, Anjos T, Martino J, Lopez-Tarragona R, Marti M, Florido J, Campoy C.<h4><em>"Gut microbiota and weight gain in overweight and normal weight pregnant women"</em><br></h4>
+            		<h1>Journal of Pediatric Gastroenterology and Nutrition. 2009; 48 Suppl.3:E74</h1>
+                    </div>                  
+					<div class="publi2">
+                    <a><img src="pr_imagenes/pdf.png" width="31" height="31"></a> <a onclick='$("#pub4").toggle(600);'><img src="pr_imagenes/pdf_ver.png" width="31" height="31"></a><br><br><br>            
+                    <div id="pub4" style="width:290px; height:210px; display:none;">
+					<b>Abstract:</b> Obesity during pregnancy is related with several serious health complications; folic acid (FA) deficiency has been linked with an increased cardiovascular disease risk. Moreover, a link between obesity and cardiovascular disease and bacterial infection risks has been suggested. Since FA seems to be a key element for the proper functioning of the immune system, the aim of the current study was to assess the relationship between body max index (BMI) and folic acid plasma levels, lipid profile .... 
+                    </div>
+                    Campoy C, Romeo J, Garcıa-Valdes L, Marti M, Martın-Lagos J.A, Segura M, Anjos T, Martın-Bautista E, Lopez-Tarragona R, Florido J, Diaz L.E, Marcos A.<h4><em>"Relation between BMI and folic acid plasma levels, lipid profile, and lymphocyte subsets at 24 weeks of gestation"</em><br></h4>
+            		<h1>Journal of Pediatric Gastroenterology and Nutrition. 2009; 48 Suppl.3:E79</h1>
+                    </div> 
+                   	<div class="publi2">
+                    <a><img src="pr_imagenes/pdf.png" width="31" height="31"></a> <a onclick='$("#pub5").toggle(600);'><img src="pr_imagenes/pdf_ver.png" width="31" height="31"></a><br><br><br>            
+                    <div id="pub5" style="width:290px; height:210px; display:none;">
+					<b>Abstract</b> Introducción: La genética y la alimentación de la madre antes y durante el embarazo, las distintas patologías metabólicas maternas, así como la ingesta de nutrientes en los primeros meses de vida del recién nacido parecen estar implicados en la etiología de la obesidad y sus consecuencias a largo plazo. La posible contribución de estos y otros factores, los mecanismos y sus efectos en el metabolismo y desarrollo de la enfermedad están aún en fase de investigación ...
+                    </div>
+                    Campoy Folgoso C, Martín-Bautista E, García-Valdés L, Florido Navío J, Agil A, Lorente J.A, Marcos A, López-Sabater M.C, Miranda-León T, Sanz Y, Molina-Font J.A.<h4><em>"Estudio de la influencia de la nutrición<br>y genética maternas sobre la programación<br>del desarrollo del tejido adiposo fetal"</em><br></h4>
+            		<h1>Nutrición Hospitaliaria. 2008;23(6):584-590</h1>
+                    </div>
+                </div>
+                <div id="tab2" class="tab_content"><br>               	
+                	<div class="linea"></div>
+    	<div class="sprite divulgacion2_contenedor" style="float:left; margin-bottom:15px"><img class="spriteimg  divulgacion2_img" src="pr_imagenes/web_pr_images_eng.png" alt="Cabecera Preobe" width="1105px" height="1100px"/></div><br>
+					<div class="publi2">
+                    <a><img src="pr_imagenes/pdf_azul.png" width="31" height="31"></a> <a onclick='$("#pub6").toggle(600);' ><img src="pr_imagenes/pdf_ver.png" width="31" height="31"></a><br><br><br>
+                    <div id="pub6" style="width:290px; height:210px; display:none;">
+                    <b>Abstract:</b> Cortical Visual Evoked Potentials (VEPc) correspond to the electrophysiologic registration of the cortical response to a luminic stimulus. We analyze the long-term effect of different nutritional supplements received by healthy pregnant women during pregnancy
+(NUHEAL Project: Placebo; DHA: 500 mg/day; 5-MTHF:400 mg/day; or both) on the pattern-reversal VEPc performed in 91 healthy German and Spanish children at 5 years old. For infants not fully breastfed, formulas were available ...
+                    </div>            
+                    Campoy C, Escolano-Margarit V, Ruíz-García J, Parrilla M, Martínez-Zaldívar C, Mueller-Felber W, Sáez J.A, Iznaola C, Koletzko B.<h4><em>"DHA and/or 5-MTHF supplementation during pregnancy and long-term effects on the pattern reversal VEPC in offspring 5 years old"</em><br></h4>
+            		<h1>Journal of Pediatric Gastroenterology and Nutrition. 2011; 52 Suppl.1:E13</h1>
+                    </div>        
+					<div class="publi2">
+                    <a><img src="pr_imagenes/pdf_azul.png" width="31" height="31"></a> <a onclick='$("#pub7").toggle(600);'><img src="pr_imagenes/pdf_ver.png" width="31" height="31"></a><br><br><br>            
+                    <div id="pub7" style="width:290px; height:210px; display:none;">
+                    <b>Abstract:</b> Parents have a direct influence on thefood choices presented to children in the home. Thinking of what parents consider when choosing foood for their children it is important to know what factors they perceive to influence a child’s cognitive development and mental performance. Parents play a very important role in the development of children food choices and eating habits which may in turn influence children’s future health positively or negatively. The present study aims to quantitatively examine parents understanding ...
+					</div>
+                    López-Robles J.C, Egan B, Gage H, Györei E, Brands B, Raats M, Martıín-Bautista E, Tamas D, Koletzko B, Campoy C.<h4><em>"Quantitative study of spanish parents beliefs of what effects children´s mental performance"</em><br></h4>
+            		<h1>Journal of Pediatric Gastroenterology and Nutrition. 2010; 50 Suppl.2:E191</h1>
+                    </div>
+					<div class="publi2">
+                    <a><img src="pr_imagenes/pdf_azul.png" width="31" height="31"></a> <a onclick='$("#pub8").toggle(600);'><img src="pr_imagenes/pdf_ver.png" width="31" height="31"></a><br><br><br>            
+                    <div id="pub8" style="width:290px; height:210px; display:none;">
+                    <b>Abstract:</b> Seafood consumption during childhood may be beneficial for child neurodevelopment, perhaps via mechanisms involving docosahexanoic acid (DHA) and ecoisapentaenoic acid (EPA), found at high concentrations in certain types of seafood, especially fatty fish. Our goal was to analyze data from three European countries to examine nutritional intake in 4 year old children, whose mothers participated in the NUHEAL Project....
+					</div>
+                    Piqueras M.J., Emmett P, Franke C, Szábo E, T. Decsi T, Koletzko B, Campoy C.<h4><em>"Analysis of nutritional intake at 4 years of age in a prospective cohort: The NUHEAL Study"</em><br></h4>
+            		<h1>Journal of Pediatric Gastroenterology and Nutrition. 2010; 50 Suppl.2:E190</h1>
+                    </div>
+					<div class="publi2">
+                    <a><img src="pr_imagenes/pdf_azul.png" width="31" height="31"></a> <a onclick='$("#pub9").toggle(600);'><img src="pr_imagenes/pdf_ver.png" width="31" height="31"></a><br><br><br>            
+                    <div id="pub9" style="width:290px; height:210px; display:none;">
+                    <b>Abstract:</b> Nutrition is one of the many factors that influence a child’s cognitive development and mental performance. Understanding the relationship between nutrition and mental performance in children is important in terms of their attainment and productivity both in school and later life. Parents play a key role in the development of children’s food choices and dietary habits. ...
+					</div>
+                    Brands B, Egan B, Gage H, López-Robles J.C, Györei E, Raats M, Martin-Bautista E, Decsi T, Campoy C, Koletzko B<h4><em>"The effect of diet on children´s mental performance - a qualitative study of perceptions, attitudes and beliefs of parents in four european conuntries"</em><br></h4>
+            		<h1>Journal of Pediatric Gastroenterology and Nutrition. 2010; 50 Suppl.2:E189</h1>
+                    </div>
+					<div class="publi2">
+                    <a><img src="pr_imagenes/pdf_azul.png" width="31" height="31"></a> <a onclick='$("#pub10").toggle(600);'><img src="pr_imagenes/pdf_ver.png" width="31" height="31"></a><br><br><br>            
+                    <div id="pub10" style="width:290px; height:210px; display:none;">
+                    <b>Abstract:</b> 311 healthy pregnant women from three European centres (Spain, Germany and Hungary) were randomly assigned to receive daily from 20 week of gestation till delivery a dietary supplement of fish oil {500 mg of docosahexaenoic acid (DHA) + 150 mg eicosapentanoic acid
+(EPA)}, 400 mg 5-Methyltetrahydrofolate (5-MTHF), both or placebo, in order to elucidate the potential long-term beneficial effect on their offspring neurodevelopment.
+					</div>
+                    Campoy C, Romeo J, Garcıa-Valdes L, Marti M, Martın-Lagos J.A, Segura M, Anjos T, Martın-Bautista E, Lopez-Tarragona R, Florido J, Diaz L.E, Marcos A.<h4><em>"Analysis of long term effects of fish oil an 5-MTHF supplementation to pregnant women on neurological outcome of their offspring: The NUHEAL Trial"
+</em><br></h4>
+            		<h1>Journal of Pediatric Gastroenterology and Nutrition. 2010; 50 Suppl.2:E23</h1>
+                    </div> 
+					<div class="publi2">
+                    <a><img src="pr_imagenes/pdf_azul.png" width="31" height="31"></a> <a onclick='$("#pub11").toggle(600);'><img src="pr_imagenes/pdf_ver.png" width="31" height="31"></a><br><br><br>
+                    <div id="pub11" style="width:290px; height:210px; display:none;">
+                    <b>Abstract:</b> To determine the influence of a lifestyle intervention to treat obesity on the gut microbiota and body weight of overweight adolescents.
+					</div>
+                    Sanz Y, Santacruz A, Collado M, Marcos A, Warnberg J, Martı A, Martin-Matillas M, Campoy C, Moreno L, Veiga O, Redondo-Figuero C, Garagorri J, Azcona C, Delgado M, Garcıa-Fuentes M<h4><em>"Influence of lifestyle and gut microbiota in weight management"</em><br></h4>
+            		<h1>Journal of Pediatric Gastroenterology and Nutrition. 2009; 48 Suppl.3:E8</h1>
+                    </div>
+					<div class="publi2">
+                    <a><img src="pr_imagenes/pdf_azul.png" width="31" height="31"></a> <a onclick='$("#pub12").toggle(600);'><img src="pr_imagenes/pdf_ver.png" width="31" height="31"></a><br><br><br>
+                    <div id="pub12" style="width:290px; height:210px; display:none;">
+                    <b>Abstract:</b> To investigate the relationship between plasma adiponectin concentrations in maternal and cord blood to anthropometrical indices measured at birth and at 4 years of age.
+					</div>
+                    Szabo E, Demmelmair H, Campoy C, Decsi T, Koletzko B.<h4><em>"Relation between maternal and neonatal plasma adiponectin concernations and anthropometrical indices at birth an at the age of 4 years"</em><br></h4>
+            		<h1>Journal of Pediatric Gastroenterology and Nutrition. 2009; 48 Suppl.3:E123</h1>
+                    </div>                    
+					<div class="publi2">
+                    <a><img src="pr_imagenes/pdf_azul.png" width="31" height="31"></a> <a onclick='$("#pub13").toggle(600);'><img src="pr_imagenes/pdf_ver.png" width="31" height="31"></a><br><br><br><br>            
+                        <div id="pub13" style="width:290px; height:210px; display:none;">
+                    <b>Abstract:</b> Methylentetrahydrofolate
+reductase (MTHFR) catalyzes the conversion of 5,10- methylentetra hydrofolate to 5-methyltetrahydrofolate
+(5-MTHF). A common genetic variant in MTHFR (MTHFR 677C!T), causes an increase of total homocysteine (tHcy) (hyperhomo cystinemia:>15mmol/L). The aim of the study was to analyze differences in MTHFR polymorphisms between three European countries and the impact of folate (F) and docosahexaenoic acid (DHA) supplementation ...
+						</div>
+                        Campoy C, Martin-Lagos J.A, Escolano M, Parrilla M, Molloy A, Martín-Bautista E, Demmelmair H, 
+    Szabo E, Décsi T, Koletzko B.<h4><em>"Methylenetetrahydrofolate Reductase (MTHFR) 677C-->T polymorphism and levels of homocysteine and folates in european pregnant women and their offspring: The NUHEAL Study"</em><br></h4>
+                        <h1>Journal of Pediatric Gastroenterology and Nutrition. 2009; 48 Suppl.3:E86</h1>
+                   	</div>                                                       
+                </div>             
+                <div id="tab3" class="tab_content"> <br>               	
+                	<div class="linea"></div>
+    	<div class="sprite divulgacion3_contenedor" style="float:left; margin-bottom:15px"><img class="spriteimg  divulgacion3_img" src="pr_imagenes/web_pr_images_eng.png" alt="Cabecera Preobe" width="1105px" height="1100px"/></div><br>
+        			<div class="publi">
+                    <a><img src="pr_imagenes/pdf_gris.png" width="31" height="31"></a> <a onclick='$("#pub14").toggle(600);'><img src="pr_imagenes/pdf_ver.png" width="31" height="31"></a><br><br><br>            
+                    <div id="pub14" style="width:290px; height:210px; display:none;">
+                    <b>Abstract:</b> Epidemiologically, maternal obesity is consistently linked with a predisposition for children overweight and obesity. The underlying mechanisms of such transmission of obesity remains however poorly understood as major confounding factors such as reduction of breastfeeding time duration, lifestyle factors, transmission of eating habits and genetic predisposition remains to be considered carefully.A better understanding of these processes may provide an unique opportunity for early prevention/intervention of Obesity, Diabetes and Metabolic Syndrome ...
+					</div>
+                    Campoy C, Koletzko B, Symonds M, Marcos A, McArdle H.<h4><em>"Effects of obesity and/or diabetes during pregnancy on fetal adiposity programming"</em></h4>                                    
+                    <h1>11th FENS European Nutrition Conference.<br>Madird, Spain. October 26-29, 2011.</h1>
+                    </div>
+                    <div class="publi">
+                    <a><img src="pr_imagenes/pdf_gris.png" width="31" height="31"></a> <a onclick='$("#pub15").toggle(600);'><img src="pr_imagenes/pdf_ver.png" width="31" height="31"></a><br><br><br>
+                    <div id="pub15" style="width:290px; height:210px; display:none;">
+                    <b>Abstract:</b> It is now well established that changes in the maternal diet at defined stages of pregnancy can affect offspring’s risk of later metabolic disease. Such alterations of fetal growth can be due to substantial modifications of materno-fetal energy partitioning regulated in part by the mammalian target of rapamycin (mTOR) and the peroxisome-proliferator activated receptor (PPAR-gamma). However, the influence of maternal body mass index (BMI) and/or insulin sensitivity on the regulation of placental ...
+					</div>
+                    Martino J, Sebert S.P, Budge H, García-Valdés L, Segura Moreno M, Anjos T, López-Tarragona R, Marti-Romero M, Florido J, Symonds M.E, Campoy C.<h4><em>"Influence of maternal BMI and gestational diabetes on MTOR and PPARG gene expression in the term placenta"</em><br></h4>
+            		<h1>European Society for Paediatric Gastroenterology, Hepatology, and Nutrition Annual Meeting. Istanbul, Turkey. June 9–12, 2010.
+</h1>
+					</div>              	                    
+                    <div class="publi">
+                    <a><img src="pr_imagenes/pdf_gris.png" width="31" height="31"></a> <a onclick='$("#pub16").toggle(600);'><img src="pr_imagenes/pdf_ver.png" width="31" height="31"></a><br><br><br> 
+                    <div id="pub16" style="width:290px; height:210px; display:none;">
+                    <b>Abstract:</b> Folic acid (FA) deficiency has been linked with an increased cardiovascular risk. FA is a key element for the proper functioning of the immune system. 87 pregnant women (30.44±4.33 years) were divided into two groups according to FA nutritional status (plasma): lower status, 12.5 nmol/L, (n=42), & higher status, ≥12.5 nmol/L, (n=45). Plasma lipid profile (LP), triglycerides (TG), total cholesterol (TC), cholesterol joined to high density (HDLc) and to low density lipoproteins (LDLc), leukocyte series and lymphocyte subpopulations (CD8+, CD4+, CD3 and CD16+56) were measured...
+					</div>
+                    Marcos A, Romeo J, García-Valdés L, Segura-Moreno MT, Anjos T, López-Tarragona R, Marti-Romero MA, Florido J, Diaz LE, Martín-Lagos JA, Martino J, Campoy C.<h4><em>"Lipid profile, leukocyte series & subpopulations of lymphocytes, according to plasma levels of folic acid at 24th weeks of gestation"</em></h4>                                    
+                    <h1>17th European Congress on Obesity.<br>Amsterdam, The Netherlands, May 6-9, 2009.</h1><br> 
+                    </div>
+					<div class="publi">
+                    <a><img src="pr_imagenes/pdf_gris.png" width="31" height="31"></a> <a onclick='$("#pub17").toggle(600);'><img src="pr_imagenes/pdf_ver.png" width="31" height="31"></a><br><br><br>            
+                    <div id="pub17" style="width:290px; height:210px; display:none;">
+					<b>Abstract:</b> To analyse the gut microbiota composition in overweight and normal weight pregnant woman, and to establish possible relations between specific bacterial groups, body weight and weight gain over pregnancy...                  
+                    </div>
+                    Sanz Y, Carmen Collado M, Garcıa-Valdes L, Martın-Lagos J, Segura M, Piqueras M, Anjos T, Martino J, Lopez-Tarragona R, Marti M, Florido J, Campoy C.<h4><em>"Gut microbiota and weight gain in overweight and normal weight pregnant women"</em><br></h4>
+            		<h1>European Society for Paediatric Gastroenterology, Hepatology and Nutrition Annual Meeting. Budapest, Hungary. June 3–6, 2009.</h1><br>
+                    </div>
+					<div class="publi">
+                    <a><img src="pr_imagenes/pdf_gris.png" width="31" height="31"></a> <a onclick='$("#pub18").toggle(600);'><img src="pr_imagenes/pdf_ver.png" width="31" height="31"></a><br><br><br>            
+                    <div id="pub18" style="width:290px; height:210px; display:none;">
+					<b>Abstract:</b> Obesity during pregnancy is related with several serious health complications; folic acid (FA) deficiency has been linked with an increased cardiovascular disease risk. Moreover, a link between obesity and cardiovascular disease and bacterial infection risks has been suggested. Since FA seems to be a key element for the proper functioning of the immune system, the aim of the current study was to assess the relationship between body max index (BMI) and folic acid plasma levels, lipid profile .... 
+                    </div>
+                    Campoy C, Romeo J, Garcıa-Valdes L, Marti M, Martın-Lagos J.A, Segura M, Anjos T, Martın-Bautista E, Lopez-Tarragona R, Florido J, Diaz L.E, Marcos A.<h4><em>"Relation between BMI and folic acid plasma levels, lipid profile, and lymphocyte subsets at 24 weeks of gestation"</em><br></h4>
+            		<h1>European Society for Paediatric Gastroenterology, Hepatology and Nutrition Annual Meeting. Budapest, Hungary. June 3–6, 2009.</h1>
+                    </div>                                   
+                </div>             
+                <div id="tab4" class="tab_content"><br>               	
+                	<div class="linea"></div>
+		<div class="sprite divulgacion4_contenedor" style="float:left; margin-bottom:15px"><img class="spriteimg  divulgacion4_img" src="pr_imagenes/web_pr_images_eng.png" alt="Cabecera Preobe" width="1105px" height="1100px"/></div><br>
+                <div class="publi3" style="width: 595px; height: 350px; padding: 5px;"><iframe align="centre" width="560" height="315" src="http://www.youtube.com/embed/NQRP-4tJrV4" frameborder="0" allowfullscreen ></iframe></div>
+                <div class="publi3" style="width: 595px; height: 350px; padding: 5px;"><iframe align="centre" width="560" height="315" src="//www.youtube.com/embed/8a5EeMbEvn4" frameborder="0" allowfullscreen ></iframe></div>
+
+
+                </div>             
+                <div id="tab5" class="tab_content"><br>               	
+                	<div class="linea"></div>
+    	<div class="sprite divulgacion5_contenedor" style="float:left; margin-bottom:15px"><img class="spriteimg  divulgacion5_img" src="pr_imagenes/web_pr_images_eng.png" alt="Cabecera Preobe" width="1105px" height="1100px"/></div><br>
+                <div class="publi">
+                <h6>Granada Hoy. 27/02/10 </h6>
+                <h5><a href="http://www.granadahoy.com/article/granada/641367/quotme/informaron/estudio/y/acepte/porque/es/necesario/para/avance/la/medicinaquot.html" target="_blank"><em>"Me informaron del estudio y acepté porque es necesario para el avance de la Medicina"</em></h5>(+) </a>
+                <img src="pr_imagenes/not2.png" width="220"  height="137" align="middle"/>
+                </div>        
+                <div class="publi">
+                <h6>SOITU 21/01/08</h6>
+                <h5><a href="http://www.soitu.es/soitu/2008/01/21/info/1200942101_400209.html" target="_blank"><em>"La UGR investiga la relación entre la dieta materna y la obesidad infantil" </em></h5>(+) </a>
+                <img src="pr_imagenes/not1.png" width="220" height="137" align="middle" />
+                </div>
+                <div class="publi">
+                <h6>SEME.ORG 06/02/08</h6>
+                <h5><em><a href="http://www.seme.org/area_seme/actualidad_articulo.php?id=1069" target="_blank">"La obesidad podría estar programada desde etapas muy precoces de la vida"</em></h5>(+) </a>
+                <img src="pr_imagenes/not3.png" width="220" height="137" align="middle"/>
+				</div>
+                <div class="publi">
+                <h6>INNOVATEC. 22/01/08</h6>                
+                <h5><a href="http://www.foroinnovatec.com/Expertos-de-la-UGR-investigan-en-120-mujeres-la-relacion-entre-la-dieta-materna-y-la-obesidad-infantil_a4111.html" target="_blank"><em>"Expertos de la UGR investigan en 120 mujeres la relación entre la dieta materna y la obesidad infantil"</em></h5>(+) </a>
+                <img src="pr_imagenes/not4.png" width="220" height="140" align="middle" /><br />
+                </div>
+                <div class="publi"></div>
+                </div>  
+                <div id="tab6" class="tab_content"><br>               	
+                	<div class="linea"></div>
+    	<div class="sprite divulgacion6_contenedor" style="float:left; margin-bottom:15px; margin-right:50px"><img class="spriteimg  divulgacion6_img" src="pr_imagenes/web_pr_images_eng.png" alt="Cabecera Preobe" width="1105px" height="1100px"/></div><br>
+        <div class="publi3"><br />
+        <a href="#"><img src="pr_imagenes/graf1.png" width="168" height="220" /></a> Fens 2011
+        </div>
+        <div class="publi3"><br />
+        <a href="#"><img src="pr_imagenes/graf2.png" width="170" height="220" /></a> Symposium 2008
+        </div>
+        <div class="publi3"></div>
+	<div class="publi3"></div>
+        <div class="publi3"></div>
+        <div class="publi3"></div>
+
+                </div>
+        </div> 
+        </div>
+       	<div id="lateral_dcha" style="margin:0px 0px 0px 39px">        	
+        	<ul id="menuderecha">
+            	<li><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('acceso','','pr_imagenes/acceso_alt_en.png',1)"><img src="pr_imagenes/acceso_en.png" alt="acceso" name="acceso" width="170" height="47" border="0" id="acceso" /></a>
+                	<ul>
+                    	<li><br /><FORM name=formclave>
+                        	Nombre de usuario
+                        	<INPUT type="text" name="nombre" />
+                        	Clave
+							<INPUT type=password name=clave>
+							<INPUT type=button value=Acceder>
+							</FORM> <br /></li>
+                    </ul>
+              </li>
+               	<li><a href="http://www.linkedin.com/home" target="_blank" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('siguenos','','pr_imagenes/siguenos_alt_en.png',1)"><img src="pr_imagenes/siguenos_en.png" alt="siguenos" name="siguenos" width="170" height="47" border="0" id="siguenos" /></a>                </li>
+                <li><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('padres','','pr_imagenes/participa_alt_en.png',1)"><img src="pr_imagenes/participa_en.png" alt="padres" name="padres" width="170" height="47" border="0" id="padres" /></a>
+                <ul><li><div style="height:120px;"></div></li></ul>
+                </li>                                            
+            </ul>
+            <ul><li><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('noticias','','pr_imagenes/noticias_alt_en.png',1)"><img src="pr_imagenes/noticias_en.png" alt="noticias" name="noticias" width="170" height="47" border="0" id="noticias" /></a> 
+                	<ul>
+                    	<li>
+                        	<marquee onmouseover=this.stop() onmouseout=this.start() direction="up" scrollAmount="2" style="width:150px;height:303px; border-bottom:thin #f97159 solid; padding:10px; text-align:center" align="middle">
+                                            <span class="noticia_cont">
+				<a href="http://www.icn2013.com/" target="_blank"><img src="pr_imagenes/pr_noticias/inus.png" align="middle"/><p><b>IUNS 20th International Congress of Nutrition</b></p><p>Granada<br/>September 15-20. 2013</p></a><p style="color: #ff0000">New Deadline for Abstract Sumbmission<br/><b>17th February</b></p><br/><br/><br/>										
+				<a href="http://www.nutrimenthe.eu/" target="_blank"><img src="pr_imagenes/pr_noticias/nutri.png" align="middle"/><p style="color: #ff0000"><b>NUTRIMENTHE Final International Conference</b><br/><i>The Effect of Diet on the Mental Performance of Children</i></p></a>Granada<br>September 13th-14th. 2013<br/><b>INUS 20th International Congress of Nutrion</b></p><br/><br/><br/>														
+				<a href="https://hiddenhunger.uni-hohenheim.de/" target="_blank"><b>Congress "Hidden Hunger - From Assessment to Solutions</b><p></p>Hohenheim<br>6-9 March 2013</a><br/><br/><br/>				
+				<a href="http://www.rcpi.ie/Faculties/Pages/ICOGPM2012.aspx" target="_blank"><b>The 2nd Irish Congress of Obstetrics, Gynaecology and Perinatal Medicine</b><p></p>Dublin<br>Nov 30 - 1 Dec, 2012</a><br/><br/><br/>		
+				<a href="http://www.proyectopreobe.com/preobe_eventos.html" target="_blank"><b>II Forum Discussion: Lipids & Programming </b><p></p>Granada<br>11th June, 2012.</a><br/><br/><br/>
+                                <a href="http://www.immunonutritionworkshop.com/index.html" target="_blank"><b>6th International Immunonutrition Workshop</b><p></p>Palma de Mallorca<br>15th - 17th of October, 2012.</a><br /><br />                            			
+                                <a href="http://www.1kserver.com/4f20153202e85/#/6" target="_blank"><h4>Noticia en prensa<br /> La Vanguardia 28/01/2012</h4><br /><em>El prólogo define la trama</em><br /><br />Los malos hábitos durante el embarazo condicionan un mayor riesgo de desarrollar enfermedades cardiovasculares, obesidad y diabetes.</a>
+
+                                            </span>
+                			</marquee>
+                        </li>                    
+          			</ul>                
+            </li></ul> 
+        </div>
+            <div id="disenoinv" style=" background-image:url(pr_imagenes/a.png);color:#FFFFFF;height:165px; width:930px; margin-left:0px;">
+            <div id="texto_unop" style="height:120px; text-align:left;width:175px; padding:25px 0px 0px 0px">Language <a href="index_en.html"><img align="right" src="pr_imagenes/etiq_en.png" style="margin-left:25px; margin-right:20px" /></a><img align="right" src="pr_imagenes/etiq_es.png" /><br /><br /><br />Text size <img align="right" src="pr_imagenes/etiq_a.png" style="margin:10px 20px 0px 25px" /><img align="right" src="pr_imagenes/etiq_aa.png" style="margin-top:10px" /></div>
+            <div style="background-color:#FAF0E6;width:0.5px;height:135px; float:left;border-right:0.5px solid white;margin-top:20px; margin-left:16px"></div>
+            <div id="texto_dosp" style="height:120px; width:165px; padding:20px 0px 0px 20px; text-align:center"><b>Contact us</b><br /><br />Centro Eurístikos</span><br />Facultad de Medicina<br />Avda. de Madrid, 11 <br />18071 Granada<br /><br />( 00 ) 34 958 023378</div>
+            <div style="background-color:#FAF0E6;width:0.5px;height:135px; float:left;border-right:0.5px solid white;margin-top:20px; margin-left:24px"></div>
+            <div id="texto_dosp" style="height:120px; width:165px; padding:20px 0px 0px 20px; text-align:center"><b>Web Development</b><br /><br />nanokios@gmail.com<br /></div>
+            <div style="background-color:#FAF0E6;width:0.5px;height:135px; float:left;border-right:0.5px solid white;margin-top:20px; margin-left:16px"></div>
+		<div id="texto_dosp" style="height:120px; width:165px; padding:20px 0px 0px 20px; text-align:center"><a href="http://biotic.ugr.es"><img title="biotic" src="pr_imagenes/biotic.png"></a></div>        	
+            </div>
+
+    </div>
+</div>
+</body>
+</html>

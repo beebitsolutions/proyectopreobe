@@ -1,0 +1,354 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {background-color:#d0cfc6;font-family:Verdana, Helvetica, Arial, sans-serif;font-size:11.35px;color:#000000;text-align:left;margin:0;}
+
+/* Estructura */ 
+#contenedor {width:1224px;height:1200px;margin:0 auto;margin-left:0px;}
+
+#lateral_izq {width:293px;height:800px;background-color:#353836;float:left;overflow:hidden;position:fixed;z-index:2;}
+
+#contenido {width:929px;background-color:#FFFFFF;padding-top:29px;float:right; z-index:1;}
+
+#lateral_dcha {width:170px;height:200px;float:left;-moz-border-radius:0px;-webkit-border-radius:0px;text-align:center;}
+
+#menuderecha li ul {display:none;border:none;}
+/* Cajas de texto */ 
+#texto_unop {width:200px;height:200px;float:left;margin-left:60px;margin-top:15px;}
+#texto_unos {width:200px;height:170px;float:left;margin-left:60px;}
+
+#texto_dosp {width:200px;height:200px;float:left;margin-left:10px;margin-top:10px;}
+#texto_doss {width:200px;height:170px;float:left;margin-left:10px;}
+
+#disenoinv {width:620px; height:300px; float:left; margin:0px 10px 0px 10px;}
+
+/* Apaños */
+.texto {font-family:font-family:Verdana, Helvetica, Arial, sans-serif; text-align:left; font-size:11.35px; padding-top:5px;}
+.linea {width:600px; height:4px; float:left; margin-left:60px; margin-top:30px; margin-bottom:30px;}
+.lineaa {width:620px; height:4px; float:left; margin-left:60px; margin-top:40px; margin-bottom:20px;}
+
+/* Menu */ 
+ul,li {list-style-type:none;margin:0;padding:0;}
+
+ul#menu {background:url(pr_menu/pr_menu.png);background-repeat:no-repeat;background-position:-0px -0px;width:293px;height:800px;margin:0;padding:0;list-style:none;display:block;}
+ul#menu li a {background:url(pr_menu/pr_menu.png) no-repeat; width:100%; height:100%; display:block; }
+ul#menu li {overflow:hidden;}
+
+#menu li.proyecto {padding-left:31px; padding-top:179px;}
+#menu li.personal {padding-left:31px; padding-top:4px;}
+#menu li.divulgacion {padding-left:31px; padding-top:4px;}
+#menu li.eventos {padding-left:31px; padding-top:4px;}
+#menu li.registro {padding-left:33px; padding-top:4px;}
+#menu li.contacto {padding-left:31px; padding-top:4px;}
+
+#menu li.proyect {padding-left:31px; padding-top:179px;}
+#menu li.persona {padding-left:31px; padding-top:4px;}
+#menu li.divulgacio {padding-left:31px; padding-top:4px;}
+#menu li.evento {padding-left:31px; padding-top:4px;}
+#menu li.registr {padding-left:33px; padding-top:4px;}
+#menu li.contact {padding-left:31px; padding-top:4px;}
+
+ul#menu_eng {background:url(pr_menu/pr_menu_eng.png);background-repeat:no-repeat;background-position:-0px -0px;width:293px;height:800px;margin:0;padding:0;list-style:none;display:block;}
+ul#menu_eng li a {background:url(pr_menu/pr_menu_eng.png) no-repeat; width:100%; height:100%; display:block; }
+ul#menu_eng li {overflow:hidden;}
+
+#menu_eng li.proyecto {padding-left:31px; padding-top:179px;}
+#menu_eng li.personal {padding-left:31px; padding-top:4px;}
+#menu_eng li.divulgacion {padding-left:31px; padding-top:4px;}
+#menu_eng li.eventos {padding-left:31px; padding-top:4px;}
+#menu_eng li.registro {padding-left:33px; padding-top:4px;}
+#menu_eng li.contacto {padding-left:31px; padding-top:4px;}
+
+#menu_eng li.proyect {padding-left:31px; padding-top:179px;}
+#menu_eng li.persona {padding-left:31px; padding-top:4px;}
+#menu_eng li.divulgacio {padding-left:31px; padding-top:4px;}
+#menu_eng li.evento {padding-left:31px; padding-top:4px;}
+#menu_eng li.registr {padding-left:33px; padding-top:4px;}
+#menu_eng li.contact {padding-left:31px; padding-top:4px;}
+
+
+.proyecto {width:230px; height:63px;}
+.proyecto a {background-position:-31px -179px !important;}
+.proyecto a:hover {background-position:-31px -938px !important;}
+.proyect {width:230px; height:63px;}
+.proyect a {background-position:-31px -938px !important;}
+
+.personal {width:230px; height:87px;}
+.personal a {background-position:-31px -246px !important;}
+.personal a:hover {background-position:-31px -1007px !important;}
+.persona {width:230px; height:87px;}
+.persona a {background-position:-31px -1007px !important;}
+
+.divulgacion {width:230px; height:52px;}
+.divulgacion a {background-position:-31px -338px !important;}
+.divulgacion a:hover {background-position:-31px -1097px !important;}
+.divulgacio {width:230px; height:52px;}
+.divulgacio a {background-position:-31px -1097px !important;}
+
+.eventos {width:230px; height:63px;}
+.eventos a {background-position:-31px -393px !important;}
+.eventos a:hover {background-position:-31px -1153px !important;}
+.evento {width:226px; height:63px;}
+.evento a {background-position:-31px -1153px !important;}
+
+.registro { width:230px; height:41px;}
+.registro a {background-position:-31px -461px !important;}
+.registro a:hover {background-position:-31px -1222px !important;}
+.registr { width:230px; height:41px;}
+.registr a {background-position:-31px -1222px !important;}
+
+.contacto { width:230px; height:63px;}
+.contacto a {background-position:-31px -505px !important;}
+.contacto a:hover {background-position:-31px -1266px !important;}
+.contact { width:230px; height:63px;}
+.contact a {background-position:-31px -1265px !important;}
+
+/* Sprite */ 
+.sprite {display:block;overflow:hidden;position:relative;}
+.spriteimg {position:absolute;border:none;}
+
+.cabecera_contenedor {width:840px; height:125px; margin-left:60px; margin-top:10px;}
+.cabecera_img {top:-238px;left:-262px;}
+
+.centro_contenedor {width:228px; height:30px;}
+.centro_img {top:-5px;left:-10px;}
+
+.conf_contenedor {width:620px;height:60px;margin:30px 0px 30px 60px;float:left;}
+.conf_img {top:-246px; left:-10px;}
+
+.contacta_contenedor {width:250px;height:20px; margin-top:20px;} 
+.contacta_img {top:-10px; left:-820px;}
+
+.disenoinv_contenedor {width:198px; height:30px; margin-bottom:20px; margin-top:23px;}
+.disenoinv_img {top:-40px;left:-8px;}
+
+.divulgacion_contenedor {width:380px; height:15px; margin-bottom:8px;}
+.divulgacion_img {top:-80px; left:-640px;}
+.divulgacion2_contenedor {width:380px; height:15px; margin-bottom:8px;}
+.divulgacion2_img {top:-100px; left:-640px;}
+.divulgacion3_contenedor {width:380px; height:15px; margin-bottom:8px;}
+.divulgacion3_img {top:-120px; left:-640px;}
+.divulgacion4_contenedor {width:380px; height:15px; margin-bottom:8px;}
+.divulgacion4_img {top:-140px; left:-640px;}
+.divulgacion5_contenedor {width:380px; height:15px; margin-bottom:8px;}
+.divulgacion5_img {top:-160px; left:-640px;}
+.divulgacion6_contenedor {width:380px; height:15px; margin-bottom:8px;}
+.divulgacion6_img {top:-180px; left:-640px;}
+
+.donde_contenedor {width:220px;height:20px;} 
+.donde_img {top:-7px; left:-590px;}
+
+.fens_contenedor {width:620px; height:60px; margin-left:60px;margin-bottom:30px;margin-top:25px; float:left;}
+.fens_img {top:-306px; left:-10px;}
+
+.fensposter_contenedor {width:197px; height:175px;}
+.fensposter_img {top:-70px; left:-190px;}
+
+.followup_contenedor {width:610px; height:50px;}
+.followup_img {top:-80px;left:-8px;}
+
+.forum_contenedor {width:620px; height:60px; margin:20px 0px 30px 60px;float:left;}
+.forum_img {top:-492px; left:-10px;}
+
+.forumimg_contenedor {width:199px; height:100px;}
+.forumimg_img {top:-174px; left:-600px;}
+
+.inmu_contenedor {width:620px; height:60px; margin:20px 0px 30px 60px;float:left;}
+.inmu_img {top:-420px; left:-10px;}
+
+.inmuno_contenedor {width:199px; height:100px;}
+.inmuno_img {top:-66px; left:-600px;}
+
+.nutri_contenedor {width:620px; height:60px; margin:45px 0px 30px 60px;float:left;}
+.nutri_img {top:-365px; left:-10px;}
+
+.nutriposter_contenedor {width:199px; height:175px;float:left;}
+.nutriposter_img {top:-70px; left:-388px;}
+
+.objetivos_contenedor {width:107px; height:33px;}
+.objetivos_img {top:-5px;left:-250px;}
+
+.participantes_contenedor {width:390px; height:40px; margin-top:5px; margin-bottom:20px;}
+.participantes_img {top:-40px; left:-500px;}
+
+.personal_contenedor {width:620px; height:30px; margin:15px 0px 15px 60px;}
+.personal_img {top:-80px; left:-8px;}
+
+.recursos_contenedor {width:200px; height:30px; margin-bottom:8px;}
+.recursos_img {top:-40px; left:-250px;}
+
+.senep_contenedor {width:620px;height:60px;margin-left:60px;margin-bottom:30px;margin-top:25px; float:left;}
+.senep_img {top:-10px; left:-10px;}
+
+.seneplogo_contenedor {width:199px; height:168px;}
+.seneplogo_img {top:-66px; left:-10px;}
+
+/* Personal */
+#col_uno {float:left;margin-top:15px;}
+#col_dos {float:left;margin-top:15px;}
+#col_tres {float:left;margin-top:15px;}
+#col_cuatro {float:left;margin-top:15px;}
+#col_cinco {float:left;margin-top:15px;}
+#col_seis {float:left;margin-top:15px;}
+ 
+ 	/* personal columan uno */
+ul#col_uno {background:url(pr_imagenes/personal_pr_images.png);background-repeat:no-repeat;background-position:-0px -0px;width:115px;height:1250px;margin:0;padding:0;list-style:none;display:block; margin-left:50px;}
+ul#col_uno li {overflow:hidden;}
+ul#col_uno li a {background:url(pr_imagenes/personal_pr_images.png) no-repeat;width:100%;height:100%;display:block;}
+
+#col_uno li.cristina { padding-top:50px; padding-left:7px;}
+#col_uno li.iryna { padding-top:114px;padding-left:7px;}
+	/* aquí iría JA Lorente */
+#col_uno li.florido { padding-top:70px;padding-left:7px;}
+#col_uno li.amarcos { padding-top:78px;padding-left:7px;}
+#col_uno li.carmenlopez { padding-top:84px;padding-left:7px;}
+
+.cristina {width:97px; height:97px;}
+.cristina a {background-position:-8px -50px !important;}
+.cristina a:hover {background-position:-8px -1350px !important;}
+
+.iryna {width:97px; height:97px;}
+.iryna a {background-position:-8px -262px !important;}
+.iryna a:hover {background-position:-8px -1562px !important;}
+
+	/* aquí iría JA Lorente */
+.florido {width:97px; height:97px;}
+.florido a {background-position:-8px -438px !important;}
+.florido a:hover {background-position:-8px -1738px !important;}
+
+.amarcos {width:97px; height:97px;}
+.amarcos a {background-position:-8px -619px !important;}
+.amarcos a:hover {background-position:-8px -1918px !important;}
+
+.carmenlopez {width:97px; height:97px;}
+.carmenlopez a {background-position:-8px -800px !important;}
+.carmenlopez a:hover {background-position:-8px -2100px !important;}
+	
+	/* personal columna dos */
+ul#col_dos {background:url(pr_imagenes/personal_pr_images.png);background-repeat:no-repeat;background-position:-115px -0px;width:105px;height:1270px;margin:0;padding:0;list-style:none;display:block; float:left;}
+ul#col_dos li {overflow:hidden;}
+ul#col_dos li a {background:url(pr_imagenes/personal_pr_images.png); no-repeat; width:100%; height:100%; display:block;}
+
+#col_dos li.agil { padding-top:50px;}
+#col_dos li.juancarlos { padding-top:7px;}
+#col_dos li.maritere { padding-top:10px;}
+	/* aquí iría Ligia Esperanza */
+
+.agil {width:98px; height:97px;}
+.agil a {background-position:-115px -50px !important;}
+.agil a:hover {background-position:-115px -1350px !important;}
+
+.juancarlos {width:98px; height:97px;}
+.juancarlos a {background-position:-115px -155px !important;}
+.juancarlos a:hover {background-position:-115px -1455px !important;}
+
+.maritere {width:98px; height:97px;}
+.maritere a {background-position:-115px -262px !important;}
+.maritere a:hover {background-position:-115px -1562px !important;}
+
+	/* aquí iría Ligia Esperanza */
+
+	/* personal columan tres */
+ul#col_tres {background:url(pr_imagenes/personal_pr_images.png);background-repeat:no-repeat;background-position:-220px -0px;width:104px;height:1270px;margin:0;padding:0;list-style:none;display:block; float:left;}
+ul#col_tres li {overflow:hidden;}
+ul#col_tres li a {background:url(pr_imagenes/personal_pr_images.png); no-repeat; width:100%; height:100%; display:block;}
+
+#col_tres li.jcalvarez { padding-top:50px;}
+#col_tres li.cris { padding-top:8px;}
+#col_tres li.paco { padding-top:8px;}
+	/* aquí iría RM Tarragona */
+#col_tres li.jromeo { padding-top:260px;}
+
+.jcalvarez {width:97px; height:97px;}
+.jcalvarez a {background-position:-221px -50px !important;}
+.jcalvarez a:hover {background-position:-221px -1350px !important;}
+
+.cris {width:97px; height:97px;}
+.cris a {background-position:-221px -155px !important;}
+.cris a:hover {background-position:-221px -1455px !important;}
+
+.paco {width:97px; height:97px;}
+.paco a {background-position:-221px -261px !important;}
+.paco a:hover {background-position:-223px -1563px !important;}
+
+.jromeo {width:97px; height:97px;}
+.jromeo a {background-position:-220px -619px !important;}
+.jromeo a:hover {background-position:-220px -1918px !important;}
+
+	/* personal columan cuatro */
+ul#col_cuatro {background:url(pr_imagenes/personal_pr_images.png);background-repeat:no-repeat;background-position:-324px -0px;width:104px;height:1270px;margin:0;padding:0;list-style:none;display:block; float:left;}
+ul#col_cuatro li {overflow:hidden;}
+ul#col_cuatro li a {background:url(pr_imagenes/personal_pr_images.png); no-repeat; width:100%; height:100%; display:block;}
+
+#col_cuatro li.tania { padding-top:50px;}
+#col_cuatro li.yolanda { padding-top:259px;}
+#col_cuatro li.angela { padding-top:113px;}
+
+	/* aquí iría MT Miranda */
+	/* aquí iría MM Romero */
+	/* aquí iría CL Sabater */
+
+.tania {width:100px; height:99px;}
+.tania a {background-position:-324px -50px !important;}
+.tania a:hover {background-position:-324px -1350px !important;}
+
+.angela {width:97px; height:97px;}
+.angela a {background-position:-324px -262px !important;}
+.angela a:hover {background-position:-324px -1554px !important;}
+
+.yolanda {width:97px; height:97px;}
+.yolanda a {background-position:-324px -617px !important;}
+.yolanda a:hover {background-position:-324px -1920px !important;}
+
+
+	/* aquí iría MT Miranda */
+	/* aquí iría MM Romero */
+	/* aquí iría CL Sabater */
+	
+	/* personal columan cinco */
+ul#col_cinco {background:url(pr_imagenes/personal_pr_images.png);background-repeat:no-repeat;background-position:-428px -0px;width:105px;height:1270px;margin:0;padding:0;list-style:none;display:block; float:left;}
+ul#col_cinco li {overflow:hidden;}
+ul#col_cinco li a {background:url(pr_imagenes/personal_pr_images.png); no-repeat; width:100%; height:100%; display:block;}
+
+#col_cinco li.pilar { padding-top:49px;}
+#col_cinco li.helena { padding-top:8px;}
+#col_cinco li.mjaguilar { padding-top:8px;}
+
+.pilar {width:98px; height:97px;}
+.pilar a {background-position:-428px -50px !important;}
+.pilar a:hover {background-position:-430px -1350px !important;}
+
+.helena {width:99px; height:99px;}
+.helena a {background-position:-428px -155px !important;}
+.helena a:hover {background-position:-428px -1454px !important;}
+
+.mjaguilar {width:99px; height:99px;}
+.mjaguilar a {background-position:-428px -261px !important;}
+.mjaguilar a:hover {background-position:-427px -1562px !important;}
+	
+	/* personal columan seis */
+ul#col_seis {background:url(pr_imagenes/personal_pr_images.png);background-repeat:no-repeat;background-position:-534px -0px;width:99px;height:1270px;margin:0;padding:0;list-style:none;display:block; float:left;}
+ul#col_seis li {overflow:hidden;}
+ul#col_seis li a {background:url(pr_imagenes/personal_pr_images.png); no-repeat; width:100%; height:100%; display:block;}
+
+#col_seis li.luz {padding-top:50px;}
+#col_seis li.mariajo { padding-top:11px;}
+#col_seis li.mariano { padding-top:10px;}
+#col_seis li.padilla { padding-top:82px;}
+
+.luz {width:97px; height:95px;}
+.luz a {background-position:-534px -50px !important;}
+.luz a:hover {background-position:-534px -1350px !important;}
+
+.mariajo { width:96px; height:95px;}
+.mariajo a {background-position:-534px -155px !important;}
+.mariajo a:hover {background-position:-534px -1455px !important;}
+
+.mariano { width:96px; height:95px;}
+.mariano a {background-position:-535px -262px !important;}
+.mariano a:hover {background-position:-535px -1557px !important;}
+
+.padilla {width:98px; height:97px;}
+.padilla a {background-position:-535px -438px !important;}
+.padilla a:hover {background-position:-535px -1738px !important;}
+

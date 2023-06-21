@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Preobe Events</title>
+<link rel="stylesheet" type="text/css" href="estilo_preobe.css"/>
+<style type="text/css">
+.texto_ficha {margin-top:10px;}
+.noticia_cont {color:#666666; font-size:9px;}
+.panel {width:150px; height:300px; float:left; background-color:#FF9999;}
+a:link {text-decoration: none; color:#666666;}
+a:visited {text-decoration: none;color:#666666;}
+a img {border:none;}
+
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+$(function(){
+		(function($){
+			
+			$.fn.accordion = function(custom) {
+				var defaults = {
+					keepOpen: false,
+					startingOpen: false
+				} 
+				var settings = $.extend({}, defaults, custom);
+				if(settings.startingOpen){
+					$(settings.startingOpen).show();
+				}
+			
+				return this.each(function(){
+					var obj = $(this);
+					$('li a', obj).click(function(event){
+							var elem = $(this).next();
+							if(elem.is('ul')){
+								event.preventDefault();
+								if(!settings.keepOpen){
+									obj.find('ul:visible').not(elem).not(elem.parents('ul:visible')).slideUp();
+								}
+								elem.slideToggle();
+							}
+					});
+				});
+			};
+		})(jQuery);
+		
+	$('#menuderecha').accordion({keepOpen:false, startingOpen: '#open'});
+	});
+	
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+
+</head>
+
+<body onload="MM_preloadImages('pr_imagenes/participa_alt.png','pr_imagenes/siguenos_alt.png','pr_imagenes/acceso_alt.png','pr_imagenes/noticias_alt.png')">
+<div id="contenedor">
+	<div id="lateral_izq">
+	  <ul id="menu_eng">
+	    <li class="proyecto"><a class="proyecto" href="index_en.html"></a></li>
+        <li class="personal"><a class="personal" href="preobe_personal_en.html"></a></li>
+        <li class="divulgacion"><a class="divulgacion" href="preobe_divulgacion_en.html"></a></li>
+        <li class="evento"><a class="evento"></a></li>
+        <li class="registro"><a class="registro" href="preobe_participantes_en.html"></a></li>
+        <li class="contacto"><a class="contacto" href="preobe_contacto_en.php"></a></li>
+	  </ul>
+  	</div>
+    <div id="contenido">
+    	<div class="sprite cabecera_contenedor"><img class="spriteimg  cabecera_img" src="pr_imagenes/web_pr_images.png" alt="Cabecera Preobe" width="1105px" height="1100px"/></div>
+        
+	<div class="sprite forum_contenedor"><img class="spriteimg forum_img" src="pr_imagenes/eventos_pr_images.png" alt="Fens Congreso" width="867px" height="735px"/></div>                
+        <div id="texto_unos">ENA / Máster Nutrenvigen<p><b>Biomedical Research Centre</b><br>Health Sciences<br>Technological Park [ PTS ]</p><p>Avda. del Conocimiento s/n<br>18100 Armilla, Granada</p><p><b>Euristikos</b> Excellence Centre for Paediatric Research [ organizer ]</p><p>Free entrance!</p></div>
+        <div id="texto_doss"><b>Speakers</b><p>Prof. Cristina Campoy</p><p>Prof. Alegría Carrasco</p><p>Prof. Marjo-Riitta Javerlin</p><p>Prof. Berthold Koletzko</p><p>Prof. Ascensión Marcos</p><p>Prof. Antonio Suarez</p><p>Prof. Michael Symonds</p></div>
+        <div id="texto_doss">
+		<div class="sprite forumimg_contenedor"><a href="http://euristikos.eu/es/eventos.html" target="_blank"><img  class="spriteimg forumimg_img" src="pr_imagenes/eventos_pr_images.png" alt="inmuno Poster" width="867px" height="735px"/></a></div>
+        </div>
+      	
+	<div id="lateral_dcha" style="margin:0px 0px 0px 51px">        	
+        	<ul id="menuderecha">
+				<li><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('acceso','','pr_imagenes/acceso_alt.png',1)"><img src="pr_imagenes/acceso.png" alt="acceso" name="acceso" width="170" height="47" border="0" id="acceso" /></a>
+						<ul>
+								<li><FORM name=formclave>Nombre de usuario
+								<INPUT type="text" name="nombre" />Clave
+								<INPUT type=password name=clave>
+								<INPUT type=button value=Acceder>
+								</FORM><br /></li>
+						</ul>
+				</li>
+				<li><a href="http://www.linkedin.com/home" target="_blank" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('siguenos','','pr_imagenes/siguenos_alt.png',1)"><img src="pr_imagenes/siguenos.png" alt="siguenos" name="siguenos" width="170" height="47" border="0" id="siguenos" /></a>                </li>  
+				<li><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('padres','','pr_imagenes/participa_alt.png',1)"><img src="pr_imagenes/participa.png" alt="padres" name="padres" width="170" height="47" border="0" id="padres" /></a>
+						<ul><li><div style="height:120px;"></div></li></ul>
+				</li>                             
+		</ul>
+				<ul><li><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('noticias','','pr_imagenes/noticias_alt.png',1)"><img src="pr_imagenes/noticias.png" alt="noticias" name="noticias" width="170" height="47" border="0" id="noticias" /></a>
+                	<ul>
+                    	<li>
+                        	<marquee onmouseover=this.stop() onmouseout=this.start() direction="up" scrollAmount="2" style="width:150px;height:369px; border-bottom:thin #f97159 solid; padding:19px; text-align:center" align="middle";>
+                                            <span class="noticia_cont">
+				<a href="http://www.icn2013.com/" target="_blank"><img src="pr_imagenes/pr_noticias/inus.png" align="middle"/><p><b>IUNS 20th International Congress of Nutrition</b></p><p>Granada<br/>September 15-20. 2013</p></a><p style="color: #ff0000">New Deadline for Abstract Sumbmission<br/><b>17th February</b></p><br/><br/><br/>										
+				<a href="http://www.nutrimenthe.eu/" target="_blank"><img src="pr_imagenes/pr_noticias/nutri.png" align="middle"/><p style="color: #ff0000"><b>NUTRIMENTHE Final International Conference</b><br/><i>The Effect of Diet on the Mental Performance of Children</i></p></a>Granada<br>September 13th-14th. 2013<br/><b>INUS 20th International Congress of Nutrion</b></p><br/><br/><br/>														
+				<a href="https://hiddenhunger.uni-hohenheim.de/" target="_blank"><b>Congress "Hidden Hunger - From Assessment to Solutions</b><p></p>Hohenheim<br>6-9 March 2013</a><br/><br/><br/>				
+				<a href="http://www.rcpi.ie/Faculties/Pages/ICOGPM2012.aspx" target="_blank"><b>The 2nd Irish Congress of Obstetrics, Gynaecology and Perinatal Medicine</b><p></p>Dublin<br>Nov 30 - 1 Dec, 2012</a><br/><br/><br/>		
+				<a href="http://www.proyectopreobe.com/preobe_eventos.html" target="_blank"><b>II Forum Discussion: Lipids & Programming </b><p></p>Granada<br>11th June, 2012.</a><br/><br/><br/>
+                                <a href="http://www.immunonutritionworkshop.com/index.html" target="_blank"><b>6th International Immunonutrition Workshop</b><p></p>Palma de Mallorca<br>15th - 17th of October, 2012.</a><br /><br />                            			
+                                <a href="http://www.1kserver.com/4f20153202e85/#/6" target="_blank"><h4>Noticia en prensa<br /> La Vanguardia 28/01/2012</h4><br /><em>El prólogo define la trama</em><br /><br />Los malos hábitos durante el embarazo condicionan un mayor riesgo de desarrollar enfermedades cardiovasculares, obesidad y diabetes.</a>
+
+                                            </span>
+                			</marquee>
+                        </li>                    
+          			</ul>                
+            </li></ul> 
+      </div>     
+     
+      
+      <div class="linea"><hr color="#f97159" size="0.5px" width="100%" /></div>
+
+	<div class="sprite inmu_contenedor"><img class="spriteimg inmu_img" src="pr_imagenes/eventos_pr_images.png" alt="Fens Congreso" width="867px" height="735px"/></div>                
+        <div id="texto_unos">Internationally renowned scientists will present state-of-the-art information on interesting and timely topics related to <b>immunonutrition</b>, the interaction between nutrition and immunity.<p></p><b>Main Topics</b>:<br>Micronutrients and the immune system.<br>Probiotics, immunity & inflammation.</div>
+        <div id="texto_doss">Prebiotics and the immune system.<br>Bioactive compounds and the immune system.<br>Lipids and the immune system.<br>Functional foods and the immune system.<br>Nutrition and immunity in different physiological states.<br>Nutrition and immunity in pathological states.<br>Nutrition and infection<br><a href="http://www.immunonutritionworkshop.com/" target="_blank">(+)</a></div>
+        <div id="texto_doss">
+		<div class="sprite inmuno_contenedor"><a href="http://www.immunonutritionworkshop.com" target="_blank"><img  class="spriteimg inmuno_img" src="pr_imagenes/eventos_pr_images.png" alt="inmuno Poster" width="867px" height="735px"/></a></div>
+        </div>
+
+         <div class="linea"><hr color="#f97159" size="0.5px" width="100%" style="margin-top:35px;" /></div>
+      
+      <div class="sprite fens_contenedor"><img class="spriteimg fens_img" src="pr_imagenes/eventos_pr_images.png" alt="Fens Congreso" width="867px" height="735px"/></div>                
+        <div id="texto_unos">El XI Congreso de la Federación Europea de Sociedades de Nutrición (FENS) reunirá por primera vez en España a los mayores expertos en nutrición quienes, durante cuatro días, analizarán las conclusiones de las últimas investigaciones científicas llevadas a cabo nacional e internacionalmente. Entre los temas más interesantes destacan los relacionados con la nutrición en las diferentes etapas de la vida, la alimentación intercultural,</div>
+        <div id="texto_doss">  la función de diferentes nutrientes en la salud humana, o la valoración de marcadores biológicos que faciliten la detección de diversas situaciones nutricionales.<br> El estudio de la obesidad cobrará especial relevancia en las mesas de debate y talleres,
+donde se analizará la <b> sensación de saciedad</b>, la <b>obesidad durante el embarazo</b> o su asociación con la <b>genética</b>. <br><a href="http://www.fensmadrid2011.com/" target="_blank">(+)</a></div>
+        <div id="texto_doss">
+		<div class="sprite fensposter_contenedor"><a href="http://www.fensmadrid2011.com/" target="_blank"><img  class="spriteimg fensposter_img" src="pr_imagenes/eventos_pr_images.png" alt="Fens Poster" width="867px" height="735px"/></a></div>
+        </div>
+   
+         <div class="linea"><hr color="#f97159" size="0.5px" width="100%" style="margin-top:35px;" /></div>
+      
+        <div class="sprite senep_contenedor"><img class="spriteimg senep_img" src="pr_imagenes/eventos_pr_images.png" alt="SENEP" width="867px" height="735px"/></div>
+        <div id="texto_unos">En junio de 2011 celebraremos en Granada la XXXV Reunión anual de la Sociedad Española de Neurología Pediátrica. Para el comité organizador de este evento es una satisfacción presentaros el programa preliminar. Como sabéis el tema que se eligió por votación en la Reunión de Bilbao fue el de "Actualizaciones Diagnósticas en Neurología Neonatal", que hemos distribuido en tres mesas redondas: la primera, versará sobre</div>
+        <div id="texto_doss">actualización de las nuevas técnicas de diagnóstico neonatal, seguirá una mesa que profundizará sobre el Neurodesarrollo y una tercera con una presentación interactiva de "actuación del Neuropediatra ante un recién nacido que convulsiona". Es nuestro deseo que un espacio quede para la presentación y discusión de las presentaciones en formato oral y pósters  que tanto enriquecen nuestras reuniones. <br><a href="http://www.registroweb.ws/AixaDreams/SENEP2010/" target="_blank">(+)</a>        </div>
+        <div id="texto_doss">
+        <div class="sprite seneplogo_contenedor"><a href="http://www.registroweb.ws/AixaDreams/SENEP2010/" target="_blank"><img class="spriteimg seneplogo_img" src="pr_imagenes/eventos_pr_images.png" alt="Senep Logo" width="867px" height="735px"/></a></div>
+        </div>
+        		<div class="linea"><hr color="#f97159" size="0.5px" width="100%" style="margin-top:35px" /></div>
+        
+        <div class="sprite conf_contenedor"><img class="spriteimg conf_img" src="pr_imagenes/eventos_pr_images.png" alt="Conferencias NutrenVigen" width="867px" height="735px"/></div>
+        <div id="texto_unos">El máster interuniversitario Nutrenvigen G+D Factors les invita a las conferencias organizadas por el Centro Eurístikos. <p><b>Ponente</b>:<br />
+<b>Dra. Mª José Noriega Borge</b>.<br>
+
+Doctora en Ciencias Biológicas por la Universidad de Oviedo, Profesora en Fisiología de la Universidad de Cantabria, Coordinadora y Profesora del Máster Interuniversitario Nutrnvigen </div>
+        <div id="texto_doss">G+D Factors en la Universidad de Cantabria y colaboradora del Grupo de Investigación Metabolismo Genética y Nutrición UC/IFIMAV. <p> <b>Seminarios</b>:
+
+<br />Día 15 de Junio: "Metodología de implementación de programas de actividad física en diferentes niveles institucionales".
+
+<br />Día 16 de Junio: "Fisiopatología de la obesidad: un punto de vista evolutivo". 
+        </div>
+        <div id="texto_doss">
+        	<b>Lugar</b>:<br> Aula 3, Facultad de Medicina, a las 17hs
+			<p><b>Más información</b>:
+			<br>Juan Carlos López-Robles
+			<br />Centro Eurístikos
+			<br />958 246 630<br /> <a href="http://cevug.ugr.es/nutrenvigen/" target="_blank" >(+)</a>        </div>
+        		<div class="linea"><hr color="#f97159" size="0.5px" width="100%" style="margin-top:45px" /></div>
+                
+        <div class="sprite nutri_contenedor"><img class="spriteimg nutri_img" src="pr_imagenes/eventos_pr_images.png" alt="Nutrimenthe" width="867px" height="735px"/></div>
+        <div id="texto_unos">
+        The <b> Sixth Nutrimenthe General Assembly</b> will take place in Warsaw, Poland at the Mamaison Le Regina Hotel which is situated in the Old Town of Warsaw within easy reach of the Frederic Chopin Airport.<br /> The host of the meeting is the Children's Memorial Health Institute in Warsaw.  The event is coordinated by Medius with kind support of Sequoia company, the partner of Martek in Poland.
+        </div>
+        <div id="texto_doss">In principle the meeting starts in the morning on March 17th (the hour depends on which WP or WG you participate in) and ends at 5:00 PM on March 18th (see Agenda for full details).
+        <a href="http://www.nutrimenthe.eu/6th_nutrimenthe_partner_meeting_17th_18th_march,_warsaw" target="_blank" ><br />(+)</a>        
+        </div>
+        <div class="sprite nutriposter_contenedor"><a href="http://www.nutrimenthe.eu/6th_nutrimenthe_partner_meeting_17th_18th_march,_warsaw" target="_blank"><img class="spriteimg nutriposter_img" src="pr_imagenes/eventos_pr_images.png" alt="Nutrimenth Poster" width="867px" height="735px"/></a></div>
+				<div class="linea"><hr color="#f97159" size="0.5px" width="100%" style="margin-top:15px" /></div>       
+            <div id="disenoinv" style=" background-image:url(pr_imagenes/a.png);color:#FFFFFF;height:165px; width:930px; margin-left:0px;">
+            <div id="texto_unop" style="height:120px; text-align:left;width:175px; padding:25px 0px 0px 0px">Language <a href="index_en.html"><img align="right" src="pr_imagenes/etiq_en.png" style="margin-left:25px; margin-right:20px" /></a><img align="right" src="pr_imagenes/etiq_es.png" /><br /><br /><br />Text size <img align="right" src="pr_imagenes/etiq_a.png" style="margin:10px 20px 0px 25px" /><img align="right" src="pr_imagenes/etiq_aa.png" style="margin-top:10px" /></div>
+            <div style="background-color:#FAF0E6;width:0.5px;height:135px; float:left;border-right:0.5px solid white;margin-top:20px; margin-left:16px"></div>
+            <div id="texto_dosp" style="height:120px; width:165px; padding:20px 0px 0px 20px; text-align:center"><b>Contact us</b><br /><br />Centro Eurístikos</span><br />Facultad de Medicina<br />Avda. de Madrid, 11 <br />18071 Granada<br /><br />( 00 ) 34 958 023378</div>
+            <div style="background-color:#FAF0E6;width:0.5px;height:135px; float:left;border-right:0.5px solid white;margin-top:20px; margin-left:24px"></div>
+            <div id="texto_dosp" style="height:120px; width:165px; padding:20px 0px 0px 20px; text-align:center"><b>Web Development</b><br /><br />nanokios@gmail.com<br /></div>
+            <div style="background-color:#FAF0E6;width:0.5px;height:135px; float:left;border-right:0.5px solid white;margin-top:20px; margin-left:16px"></div>
+		<div id="texto_dosp" style="height:120px; width:165px; padding:20px 0px 0px 20px; text-align:center"><a href="http://biotic.ugr.es"><img title="biotic" src="pr_imagenes/biotic.png"></a></div>        	
+            </div>
+    </div>
+</div>
+</body>
+</html>
